@@ -9,13 +9,13 @@ public class Inventory {
     }
 
     public void addProduct(Product product, int quantity) {
-        String productName = product.getName();
+        String productName = product.name;  // Acesso direto ao campo 'name'
         products.put(productName, products.getOrDefault(productName, 0) + quantity);
         System.out.println("Adicionado " + quantity + " de " + productName + " no Inventário.");
     }
 
     public void removeProduct(Product product, int quantity) {
-        String productName = product.getName();
+        String productName = product.name;  // Acesso direto ao campo 'name'
         if (products.containsKey(productName)) {
             int currentQuantity = products.get(productName);
             if (currentQuantity >= quantity) {

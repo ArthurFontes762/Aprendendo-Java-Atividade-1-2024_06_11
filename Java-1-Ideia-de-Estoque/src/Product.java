@@ -1,11 +1,5 @@
 public class Product {
-    private String name;
+    public String name;
 
-    public Product(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
+    // A classe pode ficar apenas com o campo 'name'
 }

@@ -1,11 +1,5 @@
 public class Employee {
-    private String name;
+    public String name;
 
-    public Employee(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
+    // A classe pode ficar apenas com o campo 'name'
 }

@@ -7,10 +7,9 @@ public class Main {
 
         System.out.println("Para começar, insira seu nome:");
         String employeeName = scanner.nextLine();
-        Employee employee = new Employee(employeeName);
 
         while (true) {
-            System.out.println("\nOlá, " + employee.getName() + ". O que você gostaria de fazer?");
+            System.out.println("\nOlá, " + employeeName + ". O que você gostaria de fazer?");
             System.out.println("1. Adicionar Produto");
             System.out.println("2. Remover Produto");
             System.out.println("3. Mostrar Inventário");
@@ -23,7 +22,8 @@ public class Main {
                 case 1:
                     System.out.println("Insira o nome do produto:");
                     String productNameToAdd = scanner.nextLine();
-                    Product productToAdd = new Product(productNameToAdd);
+                    Product productToAdd = new Product();
+                    productToAdd.name = productNameToAdd;
                     System.out.println("Insira a quantidade para ser adicionada:");
                     int quantityToAdd = scanner.nextInt();
                     inventory.addProduct(productToAdd, quantityToAdd);
@@ -31,7 +31,8 @@ public class Main {
                 case 2:
                     System.out.println("Insira o nome do produto:");
                     String productNameToRemove = scanner.nextLine();
-                    Product productToRemove = new Product(productNameToRemove);
+                    Product productToRemove = new Product();
+                    productToRemove.name = productNameToRemove;
                     System.out.println("Insira a quantidade para ser removida:");
                     int quantityToRemove = scanner.nextInt();
                     inventory.removeProduct(productToRemove, quantityToRemove);
